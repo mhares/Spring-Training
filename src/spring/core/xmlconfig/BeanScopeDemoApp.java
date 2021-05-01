@@ -8,21 +8,14 @@ public class BeanScopeDemoApp {
 		
 		// load spring configuration file
         ClassPathXmlApplicationContext context =
-                                      	new	ClassPathXmlApplicationContext("beanScope-applicationContext.xml");		
+                                      	new	ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");		
 		
 		
 		// retrieve bean from spring container
 		Coach theCoach = context.getBean("myCoach",Coach.class);
-		Coach alphaCoach = context.getBean("myCoach",Coach.class);
+		
         
-		// check if they are the same
-		boolean result = (theCoach==alphaCoach);
-		
-		// print the result 
-		System.out.println("Poiniting to the same object : " + result);
-		System.out.println("Memory location for theCoach :" + theCoach);
-		System.out.println("Memory location for alphaCoach  :" + alphaCoach);
-		
+		System.out.println(theCoach.getDailyWorkout());
 		// close the context
 		context.close();
 		

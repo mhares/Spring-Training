@@ -23,5 +23,16 @@ public class TrackCoach implements Coach {
 		
 		return fortuneService.getFortune();
 	}
+	
+	
+	// add method for startup bean
+	public void doMyStartupStuff() {
+		System.out.println("Track Coach : inside doMyStartupStuff() method ");
+	}
+
+	// add method for Cleanup bean
+		public void doMyCleanupStuff() {
+			System.out.println("Track Coach : inside doMyCleanupStuff() method ");
+		}
 
 }
