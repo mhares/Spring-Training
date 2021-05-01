@@ -24,8 +24,11 @@
  	
  	<bean id="myCricketCoach"
  		class="spring.core.xmlconfig.CricketCoach">	
- 		
- 		<property name="fortuneService" ref="myFortune"/> 		
+ 		<property name="fortuneService" ref="myFortune"/> 	
+ 		<!-- Inject Literal values -->
+  		<property name="emailAddress" value="abc@gmail.com"/> 		
+		<property name="team" value="Al-Ahly"/> 		
+ 			
     	</bean>
 
 </beans>
